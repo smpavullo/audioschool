@@ -478,7 +478,7 @@ mod tests {
                     slice_group_change_cycle: 0,
                     header_bits: 0,
                 };
-                let _ = Dpb::new().build_ref_lists(&sh, 0, 16);
+                assert!(Dpb::new().build_ref_lists(&sh, 0, 16).is_err());
             }
         }
     }
