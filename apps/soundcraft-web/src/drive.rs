@@ -1,4 +1,4 @@
-//! Google Drive for Avidschool: sign in with Google (Google Identity Services), save sessions and
+//! Google Drive for Audioschool: sign in with Google (Google Identity Services), save sessions and
 //! exports in an "Audio" folder of the user's Drive and open them from there. The `drive.file` scope keeps the
 //! app to the files it created itself. When Drive fails the file is downloaded instead, so work is
 //! never lost. `?nodrive` turns Drive off.
@@ -25,8 +25,8 @@ const UPLOAD_URL: &str = "https://www.googleapis.com/upload/drive/v3/files";
 const MAX_UPLOAD_BYTES: usize = 25 * 1024 * 1024;
 const MAX_OPEN_BYTES: usize = 256 * 1024 * 1024;
 const TOKEN_MARGIN_MS: f64 = 60_000.0;
-const BOUNDARY: &str = "avidschool_drive_boundary_7b2d90e1";
-const SESSION_KEY: &str = "avidschool_drive_session";
+const BOUNDARY: &str = "audioschool_drive_boundary_7b2d90e1";
+const SESSION_KEY: &str = "audioschool_drive_session";
 
 /// A file in Drive: (id, name, last change).
 pub type Entry = (String, String, String);

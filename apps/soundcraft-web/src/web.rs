@@ -13,8 +13,8 @@ use wasm_bindgen::JsCast as _;
 use crate::drive;
 
 const CANVAS_ID: &str = "soundcraft_canvas";
-const LANG_KEY: &str = "avidschool_lang";
-const ZOOM_KEY: &str = "avidschool_zoom";
+const LANG_KEY: &str = "audioschool_lang";
+const ZOOM_KEY: &str = "audioschool_zoom";
 
 /// The interface size: the one the user chose in this browser, otherwise bigger on a touch screen
 /// (a tablet shows the desktop layout, whose buttons are too small for a finger).
@@ -186,7 +186,7 @@ struct WebShell {
 /// The About text of the school edition: what it is, who adapted it and where it comes from.
 fn school_about() -> soundcraft_ui_egui::SchoolAbout {
     soundcraft_ui_egui::SchoolAbout {
-        name: "Avidschool".to_string(),
+        name: "Audioschool".to_string(),
         lines: vec![
             t("Versione didattica per la scuola, basata su SoundCraft.", "Classroom edition for school, based on SoundCraft.").to_string(),
             t(
